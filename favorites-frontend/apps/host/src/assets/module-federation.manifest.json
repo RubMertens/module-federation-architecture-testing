@@ -1,3 +1,4 @@
 {
-  "dashboard-app": "http://localhost:4201"
+  "dashboard-app": "http://localhost:4201",
+  "favorites-app": "http://localhost:4202"
 }

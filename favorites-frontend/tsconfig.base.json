@@ -20,6 +20,12 @@
       ],
       "@favorites-frontend/dashboard-features": [
         "libs/dashboard/features/src/index.ts"
+      ],
+      "@favorites-frontend/favorites-domain": [
+        "libs/favorites/domain/src/index.ts"
+      ],
+      "@favorites-frontend/favorites-features": [
+        "libs/favorites/features/src/index.ts"
       ]
     }
   },
