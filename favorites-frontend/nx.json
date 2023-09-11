@@ -56,7 +56,10 @@
     },
     "@nx/angular:library": {
       "linter": "eslint",
-      "unitTestRunner": "jest"
+      "unitTestRunner": "jest",
+      "prefix":"app",
+      "style":"scss",
+      "skipTests":true
     },
     "@nx/angular:component": {
       "style": "scss"

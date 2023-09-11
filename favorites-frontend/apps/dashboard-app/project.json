@@ -2,7 +2,7 @@
   "name": "dashboard-app",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "favorites-frontend",
+  "prefix": "app",
   "sourceRoot": "apps/dashboard-app/src",
   "tags": ["remote"],
   "targets": {
