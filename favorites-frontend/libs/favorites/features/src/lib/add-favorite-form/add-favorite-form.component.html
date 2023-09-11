@@ -1,0 +1,10 @@
+<form [formGroup]="form" (submit)="submit()">
+  <mat-form-field>
+    <input matInput placeholder="What is your favorite?" formControlName="entry">
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="Anything you want to add?" formControlName="comment">
+    </textarea>
+  </mat-form-field>
+  <button type="submit" mat-fab color="primary"><mat-icon>add</mat-icon></button>
+</form>
