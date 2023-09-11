@@ -1,0 +1,9 @@
+
+<mat-grid-list cols="2" *ngIf="data.getDashboardData() | async as items">
+  <mat-grid-tile *ngFor="let item of items">
+    <div>
+      <h2>{{ item.title }}</h2>
+      <p>{{ item.description }}</p>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
