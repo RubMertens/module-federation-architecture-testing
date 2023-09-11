@@ -16,7 +16,7 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/host/tsconfig.app.json",
         "assets": ["apps/host/src/favicon.ico", "apps/host/src/assets"],
-        "styles": ["apps/host/src/styles.scss"],
+        "styles": ["apps/host/src/styles.scss", "@angular/material/prebuilt-themes/indigo-pink.css"],
         "scripts": [],
         "customWebpackConfig": {
           "path": "apps/host/webpack.config.js"

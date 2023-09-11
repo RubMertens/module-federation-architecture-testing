@@ -2,6 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'favorites-frontend-dashboard-app-entry',
-  template: `<favorites-frontend-nx-welcome></favorites-frontend-nx-welcome>`,
+  template: `<h1>Dashboard App</h1>`,
 })
 export class RemoteEntryComponent {}
