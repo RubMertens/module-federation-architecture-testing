@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { TestDataService } from '@favorites-frontend/shared-core';
 
 @Component({
   selector: 'app-favorites-page',

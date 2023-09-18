@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { SharedCoreModule, SharedErrorHandler } from '@favorites-frontend/shared-core';
+import { SharedUiModule } from '@favorites-frontend/shared-ui';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +19,7 @@ import { SharedCoreModule, SharedErrorHandler } from '@favorites-frontend/shared
     MatSidenavModule,
     MatListModule,
     SharedCoreModule,
+    SharedUiModule
   ],
   providers: [{
     provide: ErrorHandler,
