@@ -1,11 +1,12 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import  {MatSidenavModule} from "@angular/material/sidenav"
-import  {MatListModule} from "@angular/material/list"
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { SharedCoreModule, SharedErrorHandler } from '@favorites-frontend/shared-core';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,9 +15,13 @@ import  {MatListModule} from "@angular/material/list"
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
     BrowserAnimationsModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    SharedCoreModule,
   ],
-  providers: [],
+  providers: [{
+    provide: ErrorHandler,
+    useClass: SharedErrorHandler
+  }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

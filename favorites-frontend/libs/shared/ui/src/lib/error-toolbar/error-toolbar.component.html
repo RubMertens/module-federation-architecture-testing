@@ -1,0 +1,12 @@
+<mat-toolbar color="warn" *ngIf="service.notification$ | async as notification">
+
+  <span>{{notification.message}}</span>
+  <span class="spacer"></span>
+
+  <button mat-button (click)="notification.dismiss()">Dismiss</button>
+
+  <ng-container  *ngFor="let action of notification.actions">
+    <button mat-button (click)="action.action()">{{action.label}}</button>
+  </ng-container>
+
+</mat-toolbar>

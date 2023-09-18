@@ -26,7 +26,9 @@
       ],
       "@favorites-frontend/favorites-features": [
         "libs/favorites/features/src/index.ts"
-      ]
+      ],
+      "@favorites-frontend/shared-core": ["libs/shared/core/src/index.ts"],
+      "@favorites-frontend/shared-ui": ["libs/shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

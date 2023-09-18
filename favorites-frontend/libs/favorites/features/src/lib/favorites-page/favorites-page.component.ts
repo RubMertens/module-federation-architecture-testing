@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { TestDataService } from '@favorites-frontend/shared-core';
 
 @Component({
   selector: 'app-favorites-page',
@@ -7,8 +7,9 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./favorites-page.component.scss'],
 })
 export class FavoritesPageComponent {
+  private count = 0;
 
-  constructor(private fb: FormBuilder){
-
+  public error(){
+    throw new Error('My custom error ' + this.count++);
   }
 }

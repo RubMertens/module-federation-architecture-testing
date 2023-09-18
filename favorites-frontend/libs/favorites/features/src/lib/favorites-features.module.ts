@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
+import {SharedUiModule} from "@favorites-frontend/shared-ui"
 
 @NgModule({
   imports: [
@@ -23,6 +24,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatIconModule,
     MatCardModule,
     MatDividerModule,
+    SharedUiModule
   ],
   declarations: [
     FavoritesPageComponent,

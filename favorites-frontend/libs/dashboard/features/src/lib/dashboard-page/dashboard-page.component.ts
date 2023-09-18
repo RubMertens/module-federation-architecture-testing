@@ -8,6 +8,5 @@ import { DashboardDataService } from '@favorites-frontend/dashboard-domain';
 })
 export class DashboardPageComponent {
   constructor(public data: DashboardDataService){
-
   }
 }
