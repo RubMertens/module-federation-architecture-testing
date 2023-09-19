@@ -13,6 +13,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { SharedUiModule } from '@favorites-frontend/shared-ui';
 import { MatTabsModule } from '@angular/material/tabs';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   imports: [
@@ -42,6 +43,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatDividerModule,
     SharedUiModule,
     MatTabsModule,
+    MatSnackBarModule
   ],
   declarations: [
     FavoritesPageComponent,

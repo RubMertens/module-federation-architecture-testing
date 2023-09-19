@@ -18,10 +18,8 @@ import {
 } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
-export class ErrorToolbarService {
-  private notification$$ = new BehaviorSubject<ToolbarNotification | null>(
-    null
-  );
+export class AngularBasedErrorToolbarService {
+
   public notificationQueue$$ = new Subject<
     Observable<ToolbarNotificationOutput | null>
   >();
@@ -60,7 +58,6 @@ export interface ToolbarNotificationOutput extends ToolbarNotification {
 export interface ToolbarNotification {
   message: string;
   duration: number;
-
   actions?: ToolbarNotificationAction[];
 }
 
