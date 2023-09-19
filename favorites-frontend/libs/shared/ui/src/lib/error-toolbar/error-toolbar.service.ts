@@ -16,7 +16,16 @@ export class CustomEventBasedErrorToolbarService implements OnDestroy {
           ...notification,
           dismiss: () => {
             dismiss$.next();
-          }
+          },
+          actions: notification.actions?.map(action => ({
+            ...action,
+            action: () => {
+              action.action({
+                error: notification.error,
+                dismiss: outputNotification.dismiss,
+              });
+            },
+          })),
         }
         const notificationWithTimeout$ =race(
           timer(notification.duration).pipe(take(1)),
@@ -41,15 +50,26 @@ interface ErrorNotification {
   message: string;
   duration: number;
   actions?: ErrorNotificationAction[];
+  error: Error;
 }
 
 export interface ToolbarNotification {
   message: string;
   duration: number;
-  actions?: ErrorNotificationAction[];
+  actions?: ToolbarNotificationAction[];
   dismiss: () => void;
 }
-export interface ErrorNotificationAction {
+export interface ToolbarNotificationAction {
   label: string;
   action: () => void;
+}
+
+export interface ErrorNotificationAction {
+  label: string;
+  action: (context: ErrorNotificationActionContext) => void;
+}
+
+export interface ErrorNotificationActionContext {
+  error: Error;
+  dismiss: () => void;
 }

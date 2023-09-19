@@ -58,7 +58,6 @@ export interface ToolbarNotificationOutput extends ToolbarNotification {
 export interface ToolbarNotification {
   message: string;
   duration: number;
-
   actions?: ToolbarNotificationAction[];
 }
 

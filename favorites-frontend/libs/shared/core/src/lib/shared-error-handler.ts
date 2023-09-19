@@ -17,6 +17,7 @@ export class SharedErrorHandler implements ErrorHandler {
             message: error.message,
             duration: 3000,
             actions,
+            error
           },
         })
       );
@@ -29,6 +30,7 @@ export class SharedErrorHandler implements ErrorHandler {
         detail: {
           message: error.message,
           duration: 3000,
+          error,
         },
       })
     );
@@ -50,7 +52,12 @@ export class SharedErrorHandler implements ErrorHandler {
 
 export interface ErrorAction{
   label: string;
-  action: () => void;
+  action: (context: ErrorActionContext) => void;
+}
+
+export interface ErrorActionContext {
+  error: Error;
+  dismiss: () => void;
 }
 
 export class ErrorWithActions  extends Error {

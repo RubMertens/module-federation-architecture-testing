@@ -14,9 +14,9 @@ import { ErrorWithActions } from '@favorites-frontend/shared-core';
   public error(){
     throw new ErrorWithActions('My custom error ' + this.count++, {
       label: "SNACKBAR",
-      action: (() => {
-        this.snackbar.open("Handling custom action from error!");
-    }).bind(this)
-    });
+      action: (context) => {
+        console.log(context);
+        this.snackbar.open("Custom action for " + context.error.message);
+    }});
   }
 }
