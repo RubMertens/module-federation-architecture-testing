@@ -15,8 +15,19 @@
         "main": "apps/host/src/main.ts",
         "polyfills": ["zone.js"],
         "tsConfig": "apps/host/tsconfig.app.json",
-        "assets": ["apps/host/src/favicon.ico", "apps/host/src/assets"],
-        "styles": ["apps/host/src/styles.scss", "@angular/material/prebuilt-themes/indigo-pink.css"],
+        "assets": [
+          "apps/host/src/favicon.ico",
+          "apps/host/src/assets",
+          {
+            "glob": "**/*",
+            "input": "./node_modules/@kolkov/angular-editor/assets/",
+            "output": "./assets/fonts/"
+          }
+        ],
+        "styles": [
+          "apps/host/src/styles.scss",
+          "@angular/material/prebuilt-themes/indigo-pink.css"
+        ],
         "scripts": [],
         "customWebpackConfig": {
           "path": "apps/host/webpack.config.js"

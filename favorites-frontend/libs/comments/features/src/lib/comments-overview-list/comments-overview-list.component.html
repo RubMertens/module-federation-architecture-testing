@@ -1,0 +1,11 @@
+
+
+
+<mat-card *ngFor="let comment of comments$ | async">
+  <mat-card-content [innerHTML]="comment.content">
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-button [routerLink]="['edit',comment.id]">Edit</a>
+    <button mat-button (click)="service.delete(comment.id)">Delete</button>
+  </mat-card-actions>
+</mat-card>

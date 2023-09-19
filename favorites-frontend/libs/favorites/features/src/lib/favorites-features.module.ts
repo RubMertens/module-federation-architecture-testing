@@ -11,11 +11,27 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
-import {SharedUiModule} from "@favorites-frontend/shared-ui"
+import { SharedUiModule } from '@favorites-frontend/shared-ui';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   imports: [
-    RouterModule.forChild([{ path: '', component: FavoritesPageComponent }]),
+    RouterModule.forChild([
+      {
+        path: '',
+        children: [
+          { path: '', component: FavoritesPageComponent },
+          {
+            path: 'comments',
+            loadChildren: () =>
+              import('@favorites-frontend/comments-features').then(
+                (m) => m.CommentsFeaturesModule
+              ),
+          },
+          { path: '**', redirectTo: '' },
+        ],
+      },
+    ]),
     CommonModule,
     ReactiveFormsModule,
     MatFormFieldModule,
@@ -24,7 +40,8 @@ import {SharedUiModule} from "@favorites-frontend/shared-ui"
     MatIconModule,
     MatCardModule,
     MatDividerModule,
-    SharedUiModule
+    SharedUiModule,
+    MatTabsModule,
   ],
   declarations: [
     FavoritesPageComponent,

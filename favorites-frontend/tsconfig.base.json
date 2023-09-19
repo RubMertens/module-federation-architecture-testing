@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@favorites-frontend/comments-features": [
+        "libs/comments/features/src/index.ts"
+      ],
       "@favorites-frontend/dashboard-domain": [
         "libs/dashboard/domain/src/index.ts"
       ],

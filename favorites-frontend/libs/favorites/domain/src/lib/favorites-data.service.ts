@@ -12,6 +12,11 @@ export class FavoritesDataService {
       id: 1,
       entry: 'Angular',
       comment: 'Angular is a platform for building mobile and desktop web applications.',
+    },
+    {
+      id: 2,
+      entry: 'Angular CLI',
+      comment: 'The Angular CLI makes it easy to create an application that already works, right out of the box.',
     }
   ]);
 

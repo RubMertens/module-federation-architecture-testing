@@ -11,6 +11,9 @@
     <mat-card-actions>
       <button mat-button color="primary" (click)="edit(favorite)">Edit</button>
       <button mat-button color="warn" (click)="delete(favorite)">Delete</button>
+      <a mat-button color="secondary" [routerLink]="['comments', 'fav-'+favorite.id]">Comment</a>
     </mat-card-actions>
   </mat-card>
 </ng-container>
+
+<router-outlet></router-outlet>
