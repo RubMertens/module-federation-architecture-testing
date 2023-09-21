@@ -4,6 +4,9 @@ import { DashboardPageComponent } from './dashboard-page/dashboard-page.componen
 import { RouterModule } from '@angular/router';
 import { DashboardDomainModule } from '@favorites-frontend/dashboard-domain';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { SharedUiModule } from "@favorites-frontend/shared-ui";
 
 @NgModule({
   imports: [
@@ -16,6 +19,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
     CommonModule,
     DashboardDomainModule,
     MatGridListModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    SharedUiModule
   ],
   declarations: [DashboardPageComponent],
 })

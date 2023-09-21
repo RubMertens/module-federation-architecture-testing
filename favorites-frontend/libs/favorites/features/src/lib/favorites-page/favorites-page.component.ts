@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ErrorWithActions } from '@favorites-frontend/shared-core';
+import { FavoritesAppError } from '@favorites-frontend/shared-contracts';
+
 
 @Component({
   selector: 'app-favorites-page',
@@ -12,7 +13,7 @@ import { ErrorWithActions } from '@favorites-frontend/shared-core';
   constructor(private snackbar: MatSnackBar){}
 
   public error(){
-    throw new ErrorWithActions('My custom error ' + this.count++, {
+    throw new FavoritesAppError('My custom error ' + this.count++, {
       label: "SNACKBAR",
       action: (context) => {
         console.log(context);

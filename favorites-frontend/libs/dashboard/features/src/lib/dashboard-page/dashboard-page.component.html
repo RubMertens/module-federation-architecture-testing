@@ -1,3 +1,6 @@
+<app-error-toolbar></app-error-toolbar>
+<button mat-button color="warn" (click)="throwError()">Throw error</button>
+
 <mat-grid-list cols="2" *ngIf="data.getDashboardData() | async as items">
   <mat-grid-tile *ngFor="let item of items">
     <div>
